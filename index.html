@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="calculadora">
+    <input type="text" id="pantalla" readonly />
+    <div class="botones">
+      <!-- Funciones adicionales -->
+      <button class="func" onclick="insertar('(')">(</button>
+      <button class="func" onclick="insertar(')')">)</button>
+      <button class="func" onclick="insertar('Math.PI')">π</button>
+      <button class="func" onclick="insertar('Math.E')">e</button>
+
+      <button class="func" onclick="funcion('exp')">eˣ</button>
+      <button class="func" onclick="funcion('ln')">ln</button>
+      <button class="func" onclick="funcion('fact')">n!</button>
+      <button class="borrar" onclick="borrarUno()">←</button>
+
+      <!-- Funciones trigonométricas y log -->
+      <button class="func" onclick="funcion('sin')">sin</button>
+      <button class="func" onclick="funcion('cos')">cos</button>
+      <button class="func" onclick="funcion('tan')">tan</button>
+      <button class="func" onclick="funcion('log')">log</button>
+      <button class="func" onclick="funcion('sqrt')">√</button>
+
+      <!-- Números y operaciones -->
+      <button class="num" onclick="insertar('7')">7</button>
+      <button class="num" onclick="insertar('8')">8</button>
+      <button class="num" onclick="insertar('9')">9</button>
+      <button class="op" onclick="insertar('/')">÷</button>
+
+      <button class="num" onclick="insertar('4')">4</button>
+      <button class="num" onclick="insertar('5')">5</button>
+      <button class="num" onclick="insertar('6')">6</button>
+      <button class="op" onclick="insertar('*')">×</button>
+
+      <button class="num" onclick="insertar('1')">1</button>
+      <button class="num" onclick="insertar('2')">2</button>
+      <button class="num" onclick="insertar('3')">3</button>
+      <button class="op" onclick="insertar('-')">−</button>
+
+      <button class="num" onclick="insertar('0')">0</button>
+      <button class="num" onclick="insertar('.')">.</button>
+      <button class="igual" onclick="calcular()">=</button>
+      <button class="op"
